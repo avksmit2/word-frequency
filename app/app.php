@@ -20,8 +20,9 @@
 
 
     $app->post("/frequency", function() use ($app) {
-
-        return $app['twig']->render("repeater.html.twig");
+        $repeats = new RepeatCounter();
+        $frequency = $repeats->countRepeats($_POST['phrase'], $_POST['word']);
+        return $app['twig']->render("repeater.html.twig", array("frequency" => $frequency, "phrase" => $_POST['phrase'], "word" => $_POST['word']));
     });
 
     return $app;

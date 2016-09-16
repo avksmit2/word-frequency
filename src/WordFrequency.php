@@ -6,7 +6,7 @@
             $i = 0;
             $words = explode(" ", $phrase);
             foreach ($words as $word) {
-                if (preg_match('/[.!?,;:]$/', $word) == 1)
+                if (preg_match('/[.!?,;:"]$/', $word) == 1)
                 {
                     $punctuation = substr($word, -1);
                     $word = chop($word, $punctuation);
