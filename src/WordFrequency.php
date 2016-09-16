@@ -6,11 +6,7 @@
             $i = 0;
             $words = explode(" ", $phrase);
             foreach ($words as $word) {
-                if (preg_match('/[.!?,;:"]$/', $word) == 1)
-                {
-                    $punctuation = substr($word, -1);
-                    $word = chop($word, $punctuation);
-                }
+                $word = preg_replace('/[^a-z0-9]+/i', '', $word);
 
                 if (strtolower($word) == strtolower($chosenWord))
                 {
