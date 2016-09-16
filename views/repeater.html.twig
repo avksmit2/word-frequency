@@ -2,14 +2,15 @@
 <html>
     <head>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
         <title>Word Frequency</title>
     </head>
     <body>
         <div class="container">
-            <h1 class="well">Check the Frequency a Word is Used!</h1>
-            <h4>Your phrase was: "{{ phrase }}".</h4>
-            <h3 class="text-center">It used "{{ word }}" {{ frequency }} times!</h3>
-            <a href="/">Check another phrase!<a>
+            <h1>Check the Frequency a Word is Used!</h1>
+            <h3>Your phrase was: <span class="phrase">"{{ phrase }}"</span>.</h3>
+            <h3 class="text-center repeats">It used "{{ word }}" {{ frequency }} times!</h3>
+            <a href="/" id="home">Check another phrase!<a>
         </div>
     </body>
 </html>

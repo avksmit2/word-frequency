@@ -1,0 +1,19 @@
+body {
+    background-image: url("http://wonderworlds.org/images/raindrops/raindrops-spring-background.jpg");
+    font-weight: bolder;
+}
+
+h3 {
+    margin: 10%;
+}
+.phrase {
+    text-decoration: underline;
+}
+
+.repeats {
+    color: red;
+}
+
+#home {
+    font-size: 2em;
+}
