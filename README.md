@@ -12,15 +12,14 @@ _{This website will allow a user to input a word and a phrase; the program will 
 
 | Behavior      | Input       |Output|Reasoning|
 | ------------- |-------------| -----| -----|
-| Ignore capitalization of letters | ("worD WOrd"), word | 2 | values with capital letters will all be changed to lowercase no matter where the capital letter is, so they will be matching, returning that "word" has been used twice |
 | Display how many times a word has been used in a phrase consisting of two words | ["word word"], word | 2 | program will compare only two words, showing that they match and return that "word" has been used twice |
+| Ignore capitalization of letters | ("worD WOrd"), word | 2 | values with capital letters will all be changed to lowercase no matter where the capital letter is, so they will be matching, returning that "word" has been used twice |
 | Display how many times a word has been used in a phrase consisting of many words | ["word having some word"], word | 2 | program will compare many words and pick out the chosen word, returning that "word" has been used twice |
 | Ignore punctuation | ["word, having some word."], word | 2 | program will compare many words with punctuation and pick out the chosen word, ignoring the punctuation, returning that "word" has been used twice |
+| Display how many times a word has been used in a phrase consisting of multiple sentences. | ["word, having some word. some word was there with a word!"], word | 2 | program will compare many words in multiple sentences and pick out the chosen word, returning that "word" has been used four times. |
 
 
 ## Setup/Installation Requirements
-
-_In Terminal:_
 
 * Clone the repository
 * Using the command line, navigate to the project's root directory

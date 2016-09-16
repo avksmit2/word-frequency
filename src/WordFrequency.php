@@ -1,16 +1,23 @@
 <?php
     class RepeatCounter
     {
-      private //////;
-
-        function __construct()
+        function countRepeats($phrase, $chosenWord)
         {
+            $i = 0;
+            $words = explode(" ", $phrase);
+            foreach ($words as $word) {
+                if (preg_match('/[.!?,;:]$/', $word) == 1)
+                {
+                    $punctuation = substr($word, -1);
+                    $word = chop($word, $punctuation);
+                }
 
-        }
-
-        function countRepeats()
-        {
-            
+                if (strtolower($word) == strtolower($chosenWord))
+                {
+                    $i++;
+                }
+            }
+            return $i;
         }
     }
 ?>
