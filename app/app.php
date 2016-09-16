@@ -1,12 +1,12 @@
 <?php
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/Template.php";
-
-    session_start();
-    if (empty($_SESSION['collection'])) {
-        $_SESSION['collection'] = array();
-    }
+    require_once __DIR__."/../src/WordFrequency.php";
+    //
+    // session_start();
+    // if (empty($_SESSION['collection'])) {
+    //     $_SESSION['collection'] = array();
+    // }
 
     use Symfony\Component\Debug\Debug;
     Debug::enable();
