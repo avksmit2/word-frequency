@@ -2,11 +2,6 @@
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/WordFrequency.php";
-    //
-    // session_start();
-    // if (empty($_SESSION['collection'])) {
-    //     $_SESSION['collection'] = array();
-    // }
 
     use Symfony\Component\Debug\Debug;
     Debug::enable();
@@ -20,12 +15,13 @@
     ));
 
     $app->get("/", function() use ($app) {
-      return $app['twig']->render("home.html.twig");
+        return $app['twig']->render("phrases.html.twig");
     });
 
 
-    $app->get("/test", function() use ($app) {
-      return 'test variables here';
+    $app->post("/frequency", function() use ($app) {
+
+        return $app['twig']->render("repeater.html.twig");
     });
 
     return $app;
