@@ -45,7 +45,33 @@
             $this->assertEquals(2, $result);
         }
 
-        
+        function test_countRepeats_ignorePunctuation()
+        {
+            // Assemble
+            $test_Phrase = new RepeatCounter();
+            $phrase = "word, having some word.";
+            $chosenWord = "word";
+
+            // Act
+            $result = $test_Phrase->countRepeats($phrase, $chosenWord);
+
+            // Assert
+            $this->assertEquals(2, $result);
+        }
+
+        function test_countRepeats_multipleSentences()
+        {
+            // Assemble
+            $test_Phrase = new RepeatCounter();
+            $phrase = "word, having some word. some word was there with a word!";
+            $chosenWord = "word";
+
+            // Act
+            $result = $test_Phrase->countRepeats($phrase, $chosenWord);
+
+            // Assert
+            $this->assertEquals(4, $result);
+        }
     }
 
 
