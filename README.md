@@ -10,11 +10,12 @@ _{This website will allow a user to input a word and a phrase; the program will 
 
 ## Specifications
 
-| Behavior      | Input       |Output|
-| ------------- |-------------| -----|
-| Behavior 1 | Input 1 | Output 1 |
-| Behavior 2 | Input 2 | Output 2 |
-| Behavior 3 | Input 3 | Output 3 |
+| Behavior      | Input       |Output|Reasoning|
+| ------------- |-------------| -----| -----|
+| Ignore capitalization of letters | ("worD WOrd"), word | 2 | values with capital letters will all be changed to lowercase no matter where the capital letter is, so they will be matching, returning that "word" has been used twice |
+| Display how many times a word has been used in a phrase consisting of two words | ["word word"], word | 2 | program will compare only two words, showing that they match and return that "word" has been used twice |
+| Display how many times a word has been used in a phrase consisting of many words | ["word having some word"], word | 2 | program will compare many words and pick out the chosen word, returning that "word" has been used twice |
+| Ignore punctuation | ["word, having some word."], word | 2 | program will compare many words with punctuation and pick out the chosen word, ignoring the punctuation, returning that "word" has been used twice |
 
 
 ## Setup/Installation Requirements
